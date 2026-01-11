@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FiSparkles, FiDroplet, FiEye, FiShoppingBag, FiExternalLink } from 'react-icons/fi'
+import { FiStar, FiDroplet, FiEye, FiShoppingBag, FiExternalLink } from 'react-icons/fi'
 import './ResultsScreen.css'
 
 export default function ResultsScreen() {
@@ -73,7 +73,7 @@ export default function ResultsScreen() {
                 className={`tab ${activeTab === 'makeup' ? 'active' : ''}`}
                 onClick={() => setActiveTab('makeup')}
               >
-                <FiSparkles /> Makeup
+                <FiStar /> Makeup
               </button>
               <button
                 className={`tab ${activeTab === 'outfits' ? 'active' : ''}`}
@@ -126,7 +126,7 @@ export default function ResultsScreen() {
                 <div className="recommendations-grid">
                   <RecommendationCard
                     title="Foundation"
-                    icon={<FiSparkles />}
+                    icon={<FiStar />}
                     description={recommendations.makeup.foundation.type}
                     detail={recommendations.makeup.foundation.description}
                     url={recommendations.makeup.foundation.url}
@@ -134,7 +134,7 @@ export default function ResultsScreen() {
                   />
                   <RecommendationCard
                     title="Blush Shades"
-                    icon={<FiSparkles />}
+                    icon={<FiStar />}
                     description={recommendations.makeup.blush.shades.join(', ')}
                     detail={recommendations.makeup.blush.description}
                     badges={recommendations.makeup.blush.shades}
@@ -143,7 +143,7 @@ export default function ResultsScreen() {
                   />
                   <RecommendationCard
                     title="Lipstick Shades"
-                    icon={<FiSparkles />}
+                    icon={<FiStar />}
                     description={recommendations.makeup.lipstick.shades.join(', ')}
                     detail={recommendations.makeup.lipstick.description}
                     badges={recommendations.makeup.lipstick.shades}
