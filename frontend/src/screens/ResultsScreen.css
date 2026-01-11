@@ -1,0 +1,28 @@
+.results-screen {
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.recommendations-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.results-footer {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -24,6 +24,13 @@ BeautyApp/
 │   ├── uploads/      # Temporary image storage
 │   └── server.js
 │
+├── frontend/         # React (Vite) web app
+│   ├── src/
+│   │   ├── screens/  # App screens
+│   │   ├── services/ # API client
+│   │   └── App.jsx
+│   └── Dockerfile
+│
 ├── mobile/           # React Native (Expo) app
 │   ├── src/
 │   │   ├── screens/  # App screens
@@ -142,12 +149,12 @@ Edit `backend/src/services/aiService.js` to integrate your chosen service.
 
 ## 📱 App Flow
 
-1. **Photo Upload Screen**: User takes photo or selects from gallery
-2. **Analyzing Screen**: Shows loading while processing
+1. **Photo Upload Screen**: User uploads photo or takes a picture
+2. **Analyzing Screen**: Shows loading animation while processing
 3. **Results Screen**: Displays personalized recommendations in 3 tabs:
-   - Skincare
-   - Makeup
-   - Outfits
+   - **Skincare**: Cleanser, Serum, Moisturizer, SPF
+   - **Makeup**: Foundation, Blush, Lipstick, Eye Makeup
+   - **Outfits**: Style recommendations with color suggestions
 
 ## 🧪 Testing
 

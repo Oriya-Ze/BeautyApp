@@ -1,0 +1,12 @@
+.upload-screen {
+  min-height: 100vh;
+}
+
+.image-preview-container {
+  text-align: center;
+}
+
+.image-preview-container .image-preview {
+  margin-bottom: 30px;
+}
+
