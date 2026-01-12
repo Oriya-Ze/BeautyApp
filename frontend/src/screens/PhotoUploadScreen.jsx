@@ -70,64 +70,62 @@ export default function PhotoUploadScreen() {
             for skincare, makeup, and outfits
           </p>
 
-          <div className="card">
-            {preview ? (
-              <div className="image-preview-container">
-                <img src={preview} alt="Preview" className="image-preview" />
-                <div className="button-group">
-                  <button className="btn btn-primary" onClick={handleUpload}>
-                    <FiUpload /> Analyze Photo
-                  </button>
-                  <button 
-                    className="btn btn-outline" 
-                    onClick={() => {
-                      setSelectedImage(null)
-                      setPreview(null)
-                      if (fileInputRef.current) {
-                        fileInputRef.current.value = ''
-                      }
-                    }}
-                  >
-                    Choose Different Photo
-                  </button>
-                </div>
+          {preview ? (
+            <div className="image-preview-container">
+              <img src={preview} alt="Preview" className="image-preview" />
+              <div className="button-group">
+                <button className="btn btn-primary" onClick={handleUpload}>
+                  <FiUpload /> Analyze Photo
+                </button>
+                <button 
+                  className="btn btn-outline" 
+                  onClick={() => {
+                    setSelectedImage(null)
+                    setPreview(null)
+                    if (fileInputRef.current) {
+                      fileInputRef.current.value = ''
+                    }
+                  }}
+                >
+                  Choose Different Photo
+                </button>
               </div>
-            ) : (
-              <>
-                <div
-                  className={`upload-area ${isDragging ? 'dragover' : ''}`}
-                  onDrop={handleDrop}
-                  onDragOver={handleDragOver}
-                  onDragLeave={handleDragLeave}
+            </div>
+          ) : (
+            <>
+              <div
+                className={`upload-area ${isDragging ? 'dragover' : ''}`}
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                onClick={() => fileInputRef.current?.click()}
+              >
+                <FiImage className="upload-icon" />
+                <div className="upload-text">Drag & Drop your photo here</div>
+                <div className="upload-hint">or click to browse</div>
+              </div>
+
+              <div className="button-group">
+                <button className="btn btn-primary" onClick={handleTakePhoto}>
+                  <FiCamera /> Take Photo
+                </button>
+                <button 
+                  className="btn btn-secondary" 
                   onClick={() => fileInputRef.current?.click()}
                 >
-                  <FiImage className="upload-icon" />
-                  <div className="upload-text">Drag & Drop your photo here</div>
-                  <div className="upload-hint">or click to browse</div>
-                </div>
+                  <FiUpload /> Upload from Device
+                </button>
+              </div>
 
-                <div className="button-group">
-                  <button className="btn btn-primary" onClick={handleTakePhoto}>
-                    <FiCamera /> Take Photo
-                  </button>
-                  <button 
-                    className="btn btn-secondary" 
-                    onClick={() => fileInputRef.current?.click()}
-                  >
-                    <FiUpload /> Upload from Device
-                  </button>
-                </div>
-
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*"
-                  onChange={handleInputChange}
-                  className="hidden-input"
-                />
-              </>
-            )}
-          </div>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleInputChange}
+                className="hidden-input"
+              />
+            </>
+          )}
         </div>
       </div>
     </div>
