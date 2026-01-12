@@ -50,3 +50,4 @@ export const analyzeFace = async (imageUri) => {
 
 export default api;
 
+
