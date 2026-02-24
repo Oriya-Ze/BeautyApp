@@ -1,0 +1,111 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--white) 0%, var(--cream-200) 100%);
+  padding: 32px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.auth-tabs button {
+  padding: 10px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--cream-100);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.auth-tabs button.active {
+  background: linear-gradient(135deg, var(--pink-600) 0%, var(--pink-500) 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-pink);
+}
+
+.auth-message {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--pink-50);
+  color: var(--pink-700);
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid var(--pink-200);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--pink-600);
+}
+
+.auth-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--pink-700) 0%, var(--pink-600) 100%);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.auth-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-form button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}

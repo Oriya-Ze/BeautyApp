@@ -1,0 +1,20 @@
+project = "beautyapp"
+stage = "prod"
+aws_region = "us-east-1"
+
+s3_lifecycle_days = 1
+
+s3_presigned_zip = "/home/oriya/BeautyApp/s3-presigned.zip"
+analyze_face_zip = "/home/oriya/BeautyApp/analyze-face.zip"
+
+external_ai_url = "https://yce-api-01.makeupar.com"
+external_ai_secret_arn = "arn:aws:secretsmanager:us-east-1:123456789012:secret:beautyapp-external-ai-prod-xxxxxx"
+external_ai_header = "Authorization"
+external_ai_scheme = "Bearer"
+
+enable_custom_domain = true
+domain_name = "example.com"
+api_subdomain = "api"
+create_route53_zone = false
+route53_zone_id = "Z0123456789ABCDEF123"
+route53_zone_name = ""

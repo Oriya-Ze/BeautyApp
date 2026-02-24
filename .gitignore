@@ -5,8 +5,13 @@ mobile/node_modules/
 
 # Environment variables
 .env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
 .env.local
 backend/.env
+mobile/.env
 
 # Uploads
 backend/uploads/*
@@ -28,13 +33,50 @@ Thumbs.db
 
 # Expo
 mobile/.expo/
+mobile/.expo-shared/
 mobile/dist/
 mobile/web-build/
+
+# Terraform
+.terraform/
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+crash.*.log
 
 # Build files
 *.exe
 *.dmg
 
+# Python
+__pycache__/
+*.pyc
+
+# Lambda artifacts
+lambda/**/*.zip
+
+# Lambda local dependencies (keep only handler.py/requirements.txt)
+lambda/functions/**/*
+!lambda/functions/**/handler.py
+!lambda/functions/**/requirements.txt
+
+# Generated artifacts
+/analyze-face.zip
+/s3-presigned.zip
+/dynamodb-tables.json
+
+# Secrets/keys
+*.pem
+*.key
+
 # Scripts
 deploy-git.sh
+
+
+
+
+
+
 
